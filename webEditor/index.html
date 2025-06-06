@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Code Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="editor">
+      <div class="resizable-section" id="html-section">
+        <div class="section-header">
+          <span>HTML</span>
+          <!-- <button onclick="toggleSection('html')">–</button> -->
+        </div>
+        <textarea id="html" placeholder="Write HTML here..."></textarea>
+      </div>
+      <div class="resizer"></div>
+
+      <div class="resizable-section" id="css-section">
+        <div class="section-header">
+          <span>CSS</span>
+          <!-- <button onclick="toggleSection('css')">–</button> -->
+        </div>
+        <textarea id="css" placeholder="Write CSS here..."></textarea>
+      </div>
+      <div class="resizer"></div>
+
+      <div class="resizable-section" id="js-section">
+        <div class="section-header">
+          <span>JavaScript</span>
+          <!-- <button onclick="toggleSection('js')">–</button> -->
+        </div>
+        <textarea id="js" placeholder="Write JavaScript here..."></textarea>
+      </div>
+    </div>
+
+    <div class="preview">
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
