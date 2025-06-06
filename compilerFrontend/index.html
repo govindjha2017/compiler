@@ -6,31 +6,71 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <nav>
-    <a href="../webEditor/index.html"><button onclick="showSection('webEditor')">🌐 Web Editor</button></a>
-    <!-- <button onclick="showSection('compiler')">💻 Online Compiler</button> -->
+    <nav>
+    <button onclick="showSection('webEditor')">🌐 Web Editor</button>
+    <button onclick="showSection('compiler')">💻 Online Compiler</button>
   </nav>
 
- 
+   <div id="webEditor" class="section">
+      <div class="container">
+    <div class="editor">
+      <div class="resizable-section" id="html-section">
+        <div class="section-header">
+          <span>HTML</span>
+          <!-- <button onclick="toggleSection('html')">–</button> -->
+        </div>
+        <textarea id="html" placeholder="Write HTML here..."></textarea>
+      </div>
+      <div class="resizer"></div>
 
-  <div class="container">
-    <div class="left">
-      <h2>Code Editor</h2>
-      <select id="language">
-        <option value="54">C++</option>
-        <option value="62">Java</option>
-        <option value="71">Python</option>
-        <option value="63">JavaScript</option>
-      </select>
-      <textarea id="code" placeholder="Write your code here..."></textarea>
-      <textarea id="input" placeholder="Enter custom input..."></textarea>
-      <button onclick="runCode()">▶️ Run</button>
+      <div class="resizable-section" id="css-section">
+        <div class="section-header">
+          <span>CSS</span>
+          <!-- <button onclick="toggleSection('css')">–</button> -->
+        </div>
+        <textarea id="css" placeholder="Write CSS here..."></textarea>
+      </div>
+      <div class="resizer"></div>
+
+      <div class="resizable-section" id="js-section">
+        <div class="section-header">
+          <span>JavaScript</span>
+          <!-- <button onclick="toggleSection('js')">–</button> -->
+        </div>
+        <textarea id="js" placeholder="Write JavaScript here..."></textarea>
+      </div>
     </div>
+
+    <div class="preview">
+      <iframe id="webOutput"></iframe>
+    </div>
+  </div>
+  </div>
+
+
+  <div id="compiler" class="section" style="display: none;">
+    <div class="compiler">
+        <div class="left">
+          <h2>Code Editor</h2>
+          <select id="language">
+            <option value="54">C++</option>
+            <option value="62">Java</option>
+            <option value="71">Python</option>
+            <option value="63">JavaScript</option>
+          </select>
+          <textarea id="code" placeholder="Write your code here..."></textarea>
+          <textarea id="input" placeholder="Enter custom input..."></textarea>
+          <button onclick="runCode()">▶️ Run</button>
+        </div>
     <div class="right">
       <h2>Output</h2>
       <pre id="output">Output will appear here...</pre>
     </div>
   </div>
+  </div>
+ 
+
+
 
 <script src="./script.js"></script>
 </body>

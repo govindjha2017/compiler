@@ -1,8 +1,8 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
 body {
@@ -13,7 +13,12 @@ body {
     /* display: flex; */
 }
 
-.container {
+/* body, html {
+  height: 100%;
+  background: #1e1e1e;
+  color: white;
+} */
+.compiler {
     display: flex;
     width: 100%;
 }
@@ -114,3 +119,83 @@ nav button {
 nav button:hover {
   background-color: #007bff;
 }
+
+
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.editor {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: #282c34;
+}
+
+.resizable-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.section-header {
+  background: #3a3f4b;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.section-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
+textarea {
+  flex: 1;
+  padding: 10px;
+  resize: none;
+  font-size: 14px;
+  background: #1e1e1e;
+  color: #f8f8f2;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+}
+
+.resizer {
+  height: 6px;
+  background: #444;
+  cursor: row-resize;
+}
+
+.preview {
+  width: 50%;
+  background: white;
+  border-left: 2px solid #444;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+ iframe{
+  border: 2px solid red;
+ }
+ 
